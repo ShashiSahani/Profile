@@ -1,0 +1,72 @@
+// Header.scss
+
+// Import Bootstrap styles
+
+
+// Your custom styles
+header{
+    transition: ease-in-out 0.3s;
+    position: relative;
+    // height: 100vh;
+    display: flex;
+    align-items: center;
+    z-index: 997;
+    overflow-y: auto;
+}
+.navbar-custom {
+    font-family: "Open Sans", sans-serif;
+    background-color: #040404;
+    align-items: center;
+    position: relative;
+    color: #fff; // Change this to the text color you prefer
+
+    .nav-item {
+        background-color: #080808;
+        color: #fff; // Change this to the link color
+
+        .nav-link {
+            color: #fff;
+   margin-bottom: 5px;
+padding: 0;
+            border-color: #040404;
+            border-top-color: #040404;
+            border-right-color: #040404;
+            border-left-color: #040404;
+            transition: color 0.3s ease;
+
+            &::before {
+                content: ""; // Empty content for the pseudo-element
+                position: absolute;
+                bottom: 0px; // Positioned at the bottom of .nav-link
+                left: 0; // Positioned at the left of .nav-link
+                width: 0; // Initially has no width (will transition to 100% on hover/focus)
+                height: 2px; // Adjust as needed, controls the thickness of the border
+                background-color: var(--bs-green); // Color of the border
+                transition: width 0.3s ease; // Smooth width transition for left-to-right effect
+                
+            }
+
+            &:hover,
+            &:focus {
+                // Change text color on hover and focus
+                border-bottom-color: var(--bs-green);
+                width: 70%;
+
+                &::before {
+                    border-bottom: 50%; // Expand the border from left to right on hover and focus
+                    
+                }
+            }
+
+            &:active,
+            &.active {
+                color: #fff;
+                border-bottom-color: var(--bs-green);
+
+            }
+        }
+    }
+
+}
+
+// Additional styling as needed...
