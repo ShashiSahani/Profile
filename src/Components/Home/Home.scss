@@ -1,0 +1,58 @@
+@import '../../index.css';
+
+main {
+    display: flex;
+     flex-direction: column; // Display social links in a column layout
+
+    justify-content: center;
+    align-items: center;
+    background: url("../../assets/demo-bg.jpg") center/cover no-repeat;
+    height: 90vh;
+    width: 100%;
+    border: 1px solid var(--bs-body-bg);
+    border-left-color: var(--bs-black);
+    border-right-color: var(--bs-black);
+    border-bottom-color: var(--bs-black);
+}
+.heading {
+    display: flex;
+    color: var(--bs-white);
+    flex-direction: column;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    justify-content: center;
+    align-items: center;
+
+}
+.developer{
+    text-decoration: none;
+    border-bottom:2px  solid;
+    border-color: var(--bs-green);
+    color: var(--bs-white);
+
+}
+.social-link {
+   display: flex;
+   flex-direction: row;
+  gap: 10px;
+  color: var(--bs-white);;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 40px;
+    width: 40px;
+    padding: 10px;
+    // Border for each icon
+    background-color: var(--bs-gray-700);
+    border-radius: 50%; // Round border
+    transition: background-color 0.3s ease; // Smooth transition for background color on hover
+    color: var(--bs-white);
+
+    &:hover {
+        background-color: var(--bs-green); // Change background color on hover
+    }
+}

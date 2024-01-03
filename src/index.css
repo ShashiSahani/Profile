@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
 }
 
 code {
@@ -12,16 +13,19 @@ code {
     monospace;
 }
 
+
 header {
   background-color: #040404;
   color: #fff;
   display: flex;
   justify-content: space-around;
+  text-align: center;
+  height: 10vh;
 }
 :root {
   font-family: "Open Sans", sans-serif;
   background-color: #040404;
-  color: #fff;
+  color: var(--bs-white);
   position: relative;
   background: transparent;
 }

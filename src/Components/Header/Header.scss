@@ -2,32 +2,53 @@
 
 // Import Bootstrap styles
 
-
 // Your custom styles
-header{
+
+header {
     transition: ease-in-out 0.3s;
     position: relative;
-    // height: 100vh;
     display: flex;
     align-items: center;
+    justify-content: space-between; // Ensure space between elements
     z-index: 997;
     overflow-y: auto;
 }
+
+.toggler-icon {
+    background-color: red;
+    color: var(--bs-white);
+
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+ul {
+    list-style: none;
+}
+
 .navbar-custom {
     font-family: "Open Sans", sans-serif;
-    background-color: #040404;
     align-items: center;
     position: relative;
-    color: #fff; // Change this to the text color you prefer
+    color: var(--bs-white);
+    display: flex;
+    flex-direction: column;
+
 
     .nav-item {
-        background-color: #080808;
-        color: #fff; // Change this to the link color
+        color: var(--bs-white);
+        display: flex;
+        flex-direction: column;
+
 
         .nav-link {
-            color: #fff;
-   margin-bottom: 5px;
-padding: 0;
+            color: var(--bs-white);
+
+            margin-bottom: 5px;
+            padding: 0;
             border-color: #040404;
             border-top-color: #040404;
             border-right-color: #040404;
@@ -35,38 +56,152 @@ padding: 0;
             transition: color 0.3s ease;
 
             &::before {
-                content: ""; // Empty content for the pseudo-element
+                content: "";
                 position: absolute;
-                bottom: 0px; // Positioned at the bottom of .nav-link
-                left: 0; // Positioned at the left of .nav-link
-                width: 0; // Initially has no width (will transition to 100% on hover/focus)
-                height: 2px; // Adjust as needed, controls the thickness of the border
-                background-color: var(--bs-green); // Color of the border
-                transition: width 0.3s ease; // Smooth width transition for left-to-right effect
-                
+                bottom: 0px;
+                left: 0;
+                width: 0;
+                height: 2px;
+                background-color: var(--bs-green);
+                transition: width 0.3s ease;
             }
 
             &:hover,
             &:focus {
-                // Change text color on hover and focus
                 border-bottom-color: var(--bs-green);
                 width: 70%;
 
                 &::before {
-                    border-bottom: 50%; // Expand the border from left to right on hover and focus
-                    
+                    border-bottom: 50%;
                 }
             }
 
             &:active,
             &.active {
-                color: #fff;
-                border-bottom-color: var(--bs-green);
+                color: var(--bs-white);
 
+                border-bottom-color: var(--bs-green);
             }
         }
     }
-
 }
 
 // Additional styling as needed...
+
+.offcanvas {
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+}
+
+.offcanvas-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--bs-white);
+    padding: 10px;
+    width: 100%;
+
+    .btn-close {
+        color: var(--bs-white);
+
+        cursor: pointer;
+    }
+}
+
+.offcanvas ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+
+}
+
+.offcanvas li {
+    // margin-bottom: 10px;
+    list-style: none;
+}
+
+.offcanvas a {
+    text-decoration: none;
+    color: var(--bs-white);
+    list-style: none;
+    letter-spacing: 2px;
+}
+
+// Responsive styles
+@media (min-width: 768px) {
+    .offcanvas {
+        display: none;
+    }
+
+    .navbar-toggler {
+        display: none;
+    }
+    .offcanvas .offcanvas-start{
+        display: none;
+    }
+
+    main {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .social-link {
+        order: 2;
+    }
+
+    ul.navbar-custom {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+
+    ul.navbar-custom li {
+        margin-bottom: 0;
+        list-style: none;
+        color: var(--bs-white);
+
+    }
+}
+
+.offcanvas.show {
+    background-color: rgba(14, 12, 12, 0.7);
+    display: flex;
+    // border: 5px solid black;
+    color: var(--bs-green);
+}
+.icons{
+    height: 30px;
+    width: 30px;
+}
+
+.offcanvas .offcanvas-start {
+    display: none;
+}
+
+.navbar-toggler {
+    position: absolute;
+    top: 3px; // Adjust the top distance as needed
+    right: 10px; // Adjust the right distance as needed
+   
+    color: var(--bs-white);
+    border: none; // Remove the border if not needed
+    cursor: pointer;
+
+   
+}
+
+  button.btn-close{
+            color:var(--bs-white);
+            background-color: var(--bs-green);
+            border-radius: 40px;
+          
+            justify-content: flex-start;
+        }

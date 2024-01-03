@@ -1,10 +1,13 @@
 import React from 'react'
-
+import "./Footer.scss"
 function Footer() {
   return (
-    <div>
-      <h1>footer</h1>
+    <footer>
+    <div className="credits">
+      Designed By   
+      <a  href='#'>Shashi Sahani</a>
     </div>
+    </footer>
   )
 }
 
