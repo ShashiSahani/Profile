@@ -5,7 +5,7 @@ function Footer() {
     <footer>
     <div className="credits">
       Designed By   
-      <a  href='#'>Shashi Sahani</a>
+      <span className='username'> "Shashi Sahani"</span>
     </div>
     </footer>
   )

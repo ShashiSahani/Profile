@@ -5,9 +5,9 @@ function Home() {
   return (
     <main>
   
-      <div className="heading">
+      <div className="homeheading">
        <h1>Shashi sahani</h1>
-<h6>I'm a passinate <a className="developer">React.js Developer</a> from Gaziabad</h6>
+<h6>I'm a passinate <span className="developer">React.js Developer</span> from Gaziabad</h6>
       </div>
       <div className="social-link">
 

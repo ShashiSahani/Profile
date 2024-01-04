@@ -14,13 +14,13 @@ code {
 }
 
 
-header {
-  background-color: #040404;
+.header {
+  background-color:var(--bs-black);
   color: #fff;
   display: flex;
-  justify-content: space-around;
-  text-align: center;
-  height: 10vh;
+  justify-content: flex-end;
+  width: 100%;
+  height: 15vh;
 }
 :root {
   font-family: "Open Sans", sans-serif;
